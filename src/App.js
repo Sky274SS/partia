@@ -1,16 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
 import React, {useState} from "react";
-import StartPage from "./pages/StartPage";
+import Layout from "./layout/Layout";
 
 
 function App() {
 
-
     return (
         <div>
-<StartPage/>
+<Layout/>
         </div>
     );
 }

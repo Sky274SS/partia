@@ -1,0 +1,33 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c2a64;
+    color: #b953c7;
+    text-align: center;
+    flex-direction: column;
+}
+.button{
+    margin: 10px 0 10px 0;
+    background-color: rgba(78, 35, 84, 0.78);
+    border: 0;
+    border-radius: 15px;
+    color: #b853c6;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+.input{
+    outline: none;
+    background-color: rgba(78, 35, 84, 0.78);
+    border: 0;
+    border-radius: 15px;
+    padding: 10px;
+    color: #b853c6;
+    font-size: 16px;
+    margin: 10px;
+}

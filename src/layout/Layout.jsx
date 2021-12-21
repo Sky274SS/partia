@@ -4,6 +4,7 @@ import FirstLoginPage from "../pages/FirstLoginPage";
 import './layout.css';
 import InfoPage from "../pages/InfoPage";
 import FirstTask from "../pages/FirstTask";
+import SecondTask from "../pages/SecondTask";
 
 const Layout = () => {
 
@@ -11,7 +12,8 @@ const Layout = () => {
         isStartPage: true,
         isFirstLoginPage: false,
         isInfoPage:false,
-        isFirstTaskPage:false
+        isFirstTaskPage:false,
+        isSecondTaskPage:false
     })
 
     return (
@@ -33,7 +35,12 @@ const Layout = () => {
             />
             }
             {
-                state.isFirstTaskPage && <FirstTask/>
+                state.isFirstTaskPage && <FirstTask
+                 state={state.isFirstTaskPage}
+                onLogin={(value) => setState({...state, isFirstTaskPage: value,isSecondTaskPage : !value})}/>
+            }
+            {
+                state.isSecondTaskPage && <SecondTask/>
             }
         </div>
         </div>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const InfoPage = () => {
+const InfoPage = ({state,onChange}) => {
     const [isInstruction, setIsInstruction] = useState(false)
     return (
         <div>
@@ -19,7 +19,7 @@ const InfoPage = () => {
                     этого необходимо, чтобы ВСЕ твои ходы были верными. Пока таймер не запущен, у тебя есть возможность
                     задать мне вопрос, который касается правил данной игры.
                 </div>
-                <button className='button'>Играть!</button>
+                <button className='button' onClick={()=>{onChange(!state)}}>Играть!</button>
             </div>}
         </div>
     );

@@ -2,12 +2,14 @@ import React, {useState} from "react";
 import StartPage from "../pages/StartPage";
 import FirstLoginPage from "../pages/FirstLoginPage";
 import './layout.css';
+import InfoPage from "../pages/InfoPage";
 
 const Layout = () => {
 
     const [state, setState] = useState({
         isStartPage: true,
-        isFirstLoginPage: false
+        isFirstLoginPage: false,
+        isInfoPage:false
     })
 
     return (
@@ -20,9 +22,13 @@ const Layout = () => {
             />}
             {state.isFirstLoginPage && <FirstLoginPage
                 state={state.isFirstLoginPage}
-                onChange={(value) => setState({...state, isFirstLoginPage: value, isStartPage: !value})}
+                onLogin={(value) => setState({...state, isFirstLoginPage: value, isInfoPage: !value})}
             />
+            }
+            {state.isInfoPage && <InfoPage
+                state={state.isInfoPage}
 
+            />
             }
         </div>
         </div>

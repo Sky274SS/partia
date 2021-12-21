@@ -12,6 +12,7 @@ const Layout = () => {
 
     return (
         <div className='container'>
+            <img src="Skymirs.png" alt="" className='skymirs'/>
         <div>
             {state.isStartPage && <StartPage
                 state={state.isStartPage}

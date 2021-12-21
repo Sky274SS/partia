@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FirstLoginPage = ({state,onLogin}) => {
-    let login,password,trueLogin='skymirs',truePassword='skymirs'
+    let login,password,trueLogin='skymirs',truePassword='071221'
     return (
         <div className="first_login_page_container">
             <div className='info' style={{marginTop:"150px"}}>Начнем нашу партию, для этого необходимо ввести логин и пароль</div>

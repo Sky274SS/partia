@@ -1,24 +1,29 @@
 import React, {useState} from 'react';
 import ReactAudioPlayer from 'react-audio-player';
 
-const SecondTask = () => {
-    const [next,setNext]=useState(false)
+const SecondTask = ({state,onLogin}) => {
+    const [next,setNext]=useState(true)
     let audio
     return (
         <div>
             <div className='heading'>Ход второй</div>
-            <div className='info' style={{marginTop:"100px"}}>Тебе необходимо послушать трек и написать его название)</div>
+            <div className='info'>Тебе необходимо послушать трек и написать его название)</div>
             <div style={{display:"none"}}>
                 <ReactAudioPlayer
                     src="Pearl.mp3"
                     controls
                     autoPlay
-                    onEnded={()=>{setNext(true)}}
                 />
             </div>
+            <img src="pearl.jpg" alt="" className='partia_img'/>
             <input type="text" className='input' onChange={e=>{audio=e.target.value}}/>
             <br/>
-            {next&&<button className='button'>Далее</button>}
+          <button className='button' onClick={()=>{
+                if(audio&&audio.trim){
+                    onLogin(!state)
+                }
+
+            }}>Далее</button>
         </div>
     );
 };

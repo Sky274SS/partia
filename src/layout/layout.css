@@ -36,7 +36,7 @@
     margin: 10px;
 }
 .info{
-    margin: 50px 0 30px 0;
+    margin: 50px auto 30px auto;
     width: 350px;
     font-size: 20px;
 
@@ -48,7 +48,12 @@
     margin: 20px 0 0 150px;
 }
 .heading{
+    text-shadow: 0 0 10px #421e49;
     margin: 20px 0 10px 0;
     font-weight: bold;
     font-size: 25px;
+}
+.partia_img{
+    width: 350px;
+    margin: 40px 0 40px 0;
 }

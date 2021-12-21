@@ -5,6 +5,9 @@ import './layout.css';
 import InfoPage from "../pages/InfoPage";
 import FirstTask from "../pages/FirstTask";
 import SecondTask from "../pages/SecondTask";
+import ThirdTask from "../pages/ThirdTask";
+import FirstPresent from "../pages/FirstPresent";
+import FinalPage from "../pages/FinalPage";
 
 const Layout = () => {
 
@@ -13,7 +16,10 @@ const Layout = () => {
         isFirstLoginPage: false,
         isInfoPage:false,
         isFirstTaskPage:false,
-        isSecondTaskPage:false
+        isSecondTaskPage:false,
+        isThirdTaskPage:false,
+        isFirstPresentPage:false,
+        isFinalPage:false
     })
 
     return (
@@ -40,8 +46,25 @@ const Layout = () => {
                 onLogin={(value) => setState({...state, isFirstTaskPage: value,isSecondTaskPage : !value})}/>
             }
             {
-                state.isSecondTaskPage && <SecondTask/>
+                state.isSecondTaskPage && <SecondTask
+                    state={state.isSecondTaskPage}
+                onLogin={(value) => setState({...state, isSecondTaskPage: value,isThirdTaskPage : !value})}/>
             }
+            {
+                state.isThirdTaskPage && <ThirdTask
+                    state={state.isThirdTaskPage}
+                    onLogin={(value) => setState({...state, isThirdTaskPage: value,isFirstPresentPage : !value})}
+                />
+            }
+            {
+                state.isFirstPresentPage && <FirstPresent
+                    state={state.isFirstPresentPage}
+                    onLogin={(value) => setState({...state, isFirstPresentPage: value,isFinalPage : !value})}
+                />
+            }
+            {state.isFinalPage&&<FinalPage
+                state={state.isFinalPage}
+                onLogin={(value) => setState({...state, isFinalPage: value,})}/>}
         </div>
         </div>
     );

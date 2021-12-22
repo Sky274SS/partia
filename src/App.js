@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import Layout from "./layout/Layout";
 
 

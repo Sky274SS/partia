@@ -34,7 +34,7 @@ const ThirdTask = ({state,onLogin}) => {
                 </div>
             </div>
             <div className='info'>Запиши цифры через пробел</div>
-            <input type="text" className='input' onChange={e=>{digital=e.target.value}}/>
+            <input type="text" className='input' placeholder='заполни меня' onChange={e=>{digital=e.target.value}}/>
             <br/>
             <button className='button' onClick={()=>{
                 if(digital&&digital.trim){

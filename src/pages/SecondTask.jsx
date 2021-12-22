@@ -16,7 +16,7 @@ const SecondTask = ({state,onLogin}) => {
                 />
             </div>
             <img src="pearl.jpg" alt="" className='partia_img'/>
-            <input type="text" className='input' onChange={e=>{audio=e.target.value}}/>
+            <input type="text" className='input' placeholder='заполни меня' onChange={e=>{audio=e.target.value}}/>
             <br/>
           <button className='button' onClick={()=>{
                 if(audio&&audio.trim){

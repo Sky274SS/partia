@@ -9,19 +9,19 @@ const FirstTask = ({state,onLogin}) => {
             <div>
                 <div>
                     <p>1. Цвет глаз?</p>
-                    <input type="text" className='input' onChange={e=>{in1=e.target.value}}/>
+                    <input type="text" className='input' placeholder='заполни меня' onChange={e=>{in1=e.target.value}}/>
                 </div>
                 <div>
                     <p>2. Знак зодиака?</p>
-                    <input type="text" className='input'onChange={e=>{in2=e.target.value}}/>
+                    <input type="text" className='input' placeholder='заполни меня' onChange={e=>{in2=e.target.value}}/>
                 </div>
                 <div>
                     <p>3. С какой стороны руль?</p>
-                    <input type="text" className='input'onChange={e=>{in3=e.target.value}}/>
+                    <input type="text" className='input' placeholder='заполни меня' onChange={e=>{in3=e.target.value}}/>
                 </div>
                 <div>
                     <p>4. Что такое счастье?</p>
-                    <input type="text" className='input'onChange={e=>{in4=e.target.value}}/>
+                    <input type="text" className='input' placeholder='заполни меня' onChange={e=>{in4=e.target.value}}/>
                 </div>
             </div>
             <button className='button'  onClick={()=>{
